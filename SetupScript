@@ -1,0 +1,9 @@
+#!/bin/bash
+
+cd ~/Desktop/MTeeTee
+pip3 install --upgrade pip
+pip3 install --user virtualenv
+python3.7 -m venv MTeeTeeEnvi
+source MTeeTeeEnvi/bin/activate
+pip3 install -r requirements.txt
+deactivate

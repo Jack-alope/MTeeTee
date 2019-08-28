@@ -1,0 +1,4 @@
+#!/bin/bash
+cd ~/Desktop/MTeeTee
+source MTeeTeeEnvi/bin/activate
+python3 startupGUI.py
