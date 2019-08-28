@@ -29,26 +29,17 @@ ___
 - v0.0.x uses the latest version of opencv
 - v0.0.x-oldmac uses opencv version 3.4.2.16  
 
-3. Move the folder to the desktop and rename it "MTeeTee". 
+3. Download the "M-Tee-Tee.zip" not the source code. 
 
-4. Open the folder and double click the "SetupScript". 
-
-5. Move "M-Tee-Tee" to the Desktop. 
-- If you want to change the icon right click --> "Get info" and drag the icon.icns from the icons folder to the top left of the window.
-- Can move the "MTeeTee" folder somewhere else but must open "M-Tee-Tee" in textedit and update the path.
-
-6. Double Click "M-Tee-Tee".
+4. Unzip the file and drage "M-Tee-Tee" to the applications folder, it is then ready to be launched. 
 
 
 # Updates:
 
 1. Download the latest zip file for your OS. 
 
-2. Remove the old "MTeeTee" folder and replace with the new one just downloaded. Make sure the new one is renamed "MTeeTee". 
+2. Remove the old "MTeeTee" application in the applications folder and replace with the new one just downloaded. Make sure the new one is named "M-Tee-Tee"
 
-3. Open the new "MTeeTee" folder and double click "SetupScript".
-
-4. You can then use the old desktop icon "M-Tee-Tee" you already had.
 
 
 # Usage:
