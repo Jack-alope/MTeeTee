@@ -10,7 +10,7 @@
   <br>
   <br>
   Instructions below are for MacOS. <br>
-  For linux the SetupScript and M-Tee-Tee launcher will not work but using terminal will.  
+  For linux the use source file and run python scripts from Terminal.  
   <br>
   For Windows I have no idea. 
 </div> <br>
