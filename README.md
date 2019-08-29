@@ -39,7 +39,7 @@ If not, install python 3.7.4 from this link. [https://www.python.org/downloads/]
 - If it does not let you because of 'unidentified developer'.
   - Go to System Preferences --> Security and Privacy --> General. Click open anyway near bottom. 
 
-7. Close all terminal windows and Eject MTeeTeeInstaller. 
+7. Close all terminal windows and Eject MTeeTeeInstaller. You can also delete the dmg file.
 
 8. You are now ready to launch M-Tee-Tee from the applications window. 
 
