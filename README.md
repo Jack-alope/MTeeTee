@@ -22,24 +22,30 @@ ___
 
 # Setup:
 
-1. Make sure to have python 3 installed.
-[https://www.python.org/downloads/](https://www.python.org/downloads/)
+1. Make sure to have python 3 installed. Open terminal and type "python3". If you see this it is installed. 
+![trackingGUI](icon/python3.png) 
+If not, install python 3.7.4 from this link. [https://www.python.org/downloads/](https://www.python.org/downloads/)
 
-2. Go to [https://www.github.com/Jack-alope/MTeeTee/releases](https://www.github.com/Jack-alope/MTeeTee/releases) and download the zip of the latest realease. If on macOS 10.12 or higher download v0.0.x while if on macOS 10.11 download v0.0.x-oldmac.  
-- v0.0.x uses the latest version of opencv
-- v0.0.x-oldmac uses opencv version 3.4.2.16  
+2. Go to [https://www.github.com/Jack-alope/MTeeTee/releases](https://www.github.com/Jack-alope/MTeeTee/releases) and download the .dmg of the latest realease. If on macOS 10.12 or higher download 'MTeeTeeInstaller-10-12.dmg' while if on macOS 10.11 download 'MTeeTeeInstaller-10-11.dmg'.  
+- MTeeTeeInstaller-10-12.dmg uses the latest version of opencv
+- MTeeTeeInstaller-10-11.dmg uses opencv version 3.4.2.16  
 
-3. Download the "M-Tee-Tee.zip" not the source code. 
+4. Double click the dmg file and open the disk image. You should see something like this. 
+![trackingGUI](icon/installer.png)
 
-4. Unzip the file and drage "M-Tee-Tee" to the applications folder, it is then ready to be launched. 
+5. Drag the 'M-Tee-Tee' into the Applications folder. 
 
+6. Double click 'SetupScript'. Let it run until you see [Process Completed]. 
+- If it does not let you because of 'unidentified developer'.
+  - Go to System Preferences --> Security and Privacy --> General. Click open anyway near bottom. 
+
+7. Close all terminal windows and Eject MTeeTeeInstaller. 
+
+8. You are now ready to launch M-Tee-Tee from the applications window. 
 
 # Updates:
 
-1. Download the latest zip file for your OS. 
-
-2. Remove the old "MTeeTee" application in the applications folder and replace with the new one just downloaded. Make sure the new one is named "M-Tee-Tee"
-
+1. Download the latest release. Same as Setup except when you drag M-Tee-Tee to applications it will give you a warning, Click replace. 
 
 
 # Usage:
