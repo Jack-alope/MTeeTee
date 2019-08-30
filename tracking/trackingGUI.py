@@ -24,6 +24,8 @@ class Track():
                 key='VIDEOPATH'), sg.FileBrowse()],
             [sg.Text('Save to:', size=(25, 1)), sg.InputText(
                 key='SAVE'), sg.FolderBrowse()],
+            [sg.Text('Day', size=(25, 1)),
+             sg.InputText(key='DAY')],
             [sg.Text('First Tissue', size=(25, 1)),
              sg.InputText(key='FIRSTTISSUE')],
             [sg.Text('Last Tissue', size=(25, 1)),
@@ -56,7 +58,7 @@ class Track():
         window.Close()
 
         # Turn the numebrs into numbers instead of text
-        intergerize = ['FIRSTTISSUE', 'LASTTISSUE', 'FRAMEWIDTH']
+        intergerize = ['FIRSTTISSUE', 'LASTTISSUE', 'FRAMEWIDTH', 'DAY']
         floaterize = ['PACINGFREQ', 'ELECTRODESPACING',
                       'PACINGVOLT', 'EXCITTHRESH', 'CALIBDIST']
 

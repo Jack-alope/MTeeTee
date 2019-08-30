@@ -1,4 +1,3 @@
-#from tracking.centroidtracker import CentroidTracker
 from imutils.video import VideoStream
 import numpy as np
 import imutils
@@ -21,8 +20,8 @@ class MultiTissueTracker():
 			dummy = {}
 			dummy["abstissueID"] = (params['FIRSTTISSUE'] + i)
 			dummy["crosssect"] = 0
-			dummy["txtfile"] = open('{2}/T{0}@{1}Hz.txt'.format((params['FIRSTTISSUE'] + i), params['PACINGFREQ'], params['SAVE']), "w")
-			dummy["csvfile"] = open('{2}/T{0}@{1}Hz.csv'.format((params['FIRSTTISSUE'] + i), params['PACINGFREQ'], params['SAVE']), "w")
+			dummy["txtfile"] = open('{2}/T{0}@{1}Hz_{3}.txt'.format((params['FIRSTTISSUE'] + i), params['PACINGFREQ'], params['SAVE'], params['DAY']), "w")
+			dummy["csvfile"] = open('{2}/T{0}@{1}Hz_{3}.csv'.format((params['FIRSTTISSUE'] + i), params['PACINGFREQ'], params['SAVE'], params['DAY']), "w")
 			dummy["nummeasurments"] = 0
 			self.tissuedict[i] = dummy
 			self.tissuedict[i]['csvfile'].write('time' + ',' + 'disp' + ',' + 'x1' + ',' + 'y1' + ',' + 'x2' + ',' + 'y2' + ',' + 'crosssect' + '\n')
