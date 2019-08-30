@@ -76,7 +76,7 @@ Upon selecting "track" from the startupGUI this screen will appear.
 - Group Name**: Currently being worked on. 
 - Group Number**: Currently being worked on. 
 - Tracker: Which type of opencv tracker would you like to use. csrt gives best results while kcf is the fastest. 
-![trackingGUI](icon/trackinggui.png)  
+![trackingGUI](icon/trackinggui1.png)  
 1. Once you submit a frame will pop, this is a 6 tissue example. 
 ![trackingGUI](icon/trackstart.png) 
 2. Immediately press 'c' and draw a calibration line the length that you inputted in the GUI. Press enter. 
@@ -110,7 +110,7 @@ Upon selecting "analyze" this screen will appear.
 - Peak Smoothing window: What size window should it use for the smoothing function. Larger is smoother. 
 - Time min: Start time. Use 0 to start from beginning. 
 - Time max: End Time. Use 0 to continue to end. 
-![analyzeGUI](icon/analyzegui.png) 
+![analyzeGUI](icon/analyzegui1.png) 
 When submitted it should produce a graph like this for each tissue. (Zoom will vary depending on number of points).
 ![analyzegraph](icon/analyzegraph.png) 
 If you do not agree with the graph edit the settings in the GUI until you get it to capture the points to your liking.  
