@@ -14,8 +14,6 @@ class Analyze():
                 key='FOLDER'), sg.FolderBrowse()],
             [sg.Text('Percentage Threshold', size=(25, 1)),
              sg.InputText('.8', key='THRESWIDTH')],
-            [sg.Text('Post Radius', size=(25, 1)),
-             sg.InputText('.5', key='POSTRADIUS')],
             [sg.Text('Youngs Modulus', size=(25, 1)),
              sg.InputText('1.33', key='YOUNGS')],
             [sg.Text('Distance between posts', size=(25, 1)),
@@ -38,7 +36,7 @@ class Analyze():
         window = sg.Window('Analyze GUI', layout)
         event, expar = window.Read()
 
-        floaterizer = ['THRESWIDTH', 'POSTRADIUS',
+        floaterizer = ['THRESWIDTH',
                        'YOUNGS', 'MAXDISP', 'PEAKSENS', 'PEAKDIST', 'TIMEMIN', 'TIMEMAX']
         intergerizer = ['PEAKPOLY', 'PEAKWIND']
 

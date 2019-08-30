@@ -76,16 +76,19 @@ class GraphAnalyze():
             # Get tissue name
             expar[i] = {}
             expar[i]['TISSUE'] = files[i].split('/')[-1].split('@')[0]
+            expar[i]['DAY'] = files[i].split('/')[-1].split('_')[-1].split('.')[0]
             expar[i]['PACINGFREQ'] = files[i].split(
                 '/')[-1].split('@')[1].split('Hz')[0]
             expar[i]['CROSSSECT'] = df[i]['crosssect'][0]
             # Put height schtuff into expar dict
             if expar['BIO'] == 'multitissue':
+                expar['POSTRADIUS'] = .277
                 expar[i]['POSTHEIGHT1'] = heightfile[0]['POSTHEIGHT1'][i]
                 expar[i]['TISSUEHEIGHT1'] = heightfile[0]['TISSUEHEIGHT1'][i]
                 expar[i]['POSTHEIGHT2'] = heightfile[0]['POSTHEIGHT2'][i]
                 expar[i]['TISSUEHEIGHT2'] = heightfile[0]['TISSUEHEIGHT2'][i]
             elif expar['BIO'] == 'eht':
+                expar['POSTRADIUS'] = .5
                 expar[i]['POSTHEIGHT1'] = 12
                 expar[i]['TISSUEHEIGHT1'] = 11.5
                 expar[i]['POSTHEIGHT2'] = 12
