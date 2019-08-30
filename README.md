@@ -65,6 +65,7 @@ You have two choices.
 Upon selecting "track" from the startupGUI this screen will appear. 
 - Video path: Select browse and navigate to the video file you want to track.
 - Save to: Select or create a folder in which you want the generated data to be saved to.
+- Day: The day the tissues are on. This is added to file name and read by analyzeGUI. 
 - First Tissue: The first tissue number you are going to track in this video. 
 - Last Tissue: The last tissue you will select. Note, tissue in video must be in consecutive order. Or files renamed after. 
 - Pacing Frequency: The frequency at which the tissues were paced. Note, for spontaneous the standard is 0.1
@@ -100,8 +101,7 @@ Upon selecting "analyze" this screen will appear.
   - If "eht" no height file is required as post and tissue heights are constant and already known. 
   - If "multitissue" a Heights.csv file will need to be provided, an example will be in this repository. 
 - Folder: The folder that you previously generated is. This is also where the heightfile would be saved to. 
-- Percentage Threshold**: Increase this if basepoint or endpoint is too high (Between 0-1)
-- Post Radius: Will Be deleted, based on bioreactor type. 
+- Percentage Threshold**: Increase this if it catches a peak as basepoint or endpoint you dont want. (Between 0-1)
 - Youngs modulus: For the mold material, standard 1.33 MPa.
 - Distance between posts**: How far away are the posts from each other. 
 - Peak Setection Sens: The lower the number the more sensitive (Between 0-1).
