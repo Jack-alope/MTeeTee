@@ -26,7 +26,7 @@ ___
 ![trackingGUI](icon/python3.png) 
 If not, install python 3.7.4 from this link. [https://www.python.org/downloads/](https://www.python.org/downloads/)
 
-2. Download the .dmg installer from the link below or from my github [releases page](https://github.com/Jack-alope/MTeeTee/releases)
+2. Download the .dmg installer by clicking on your operating system below or by visiting my github [releases page](https://github.com/Jack-alope/MTeeTee/releases).
 - [Mac OS 10.12 or higher](https://github.com/Jack-alope/MTeeTee/releases/download/v0.0.3/MTeeTeeMacOS-10-12.dmg)
   - Uses the latest version of opencv
 - Will add link for Mac OS 10.11
