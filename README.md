@@ -6,7 +6,7 @@
 </div>
 <br>
 <div align="center">
-  This is a program designed to track n sets of defecting posts and perform a series of calculations to understand that motion. It is written in python and reies on opencv trackers. 
+  This is a program designed to track n sets of defecting posts and perform a series of calculations to understand that motion. It is written in python and relies on opencv trackers. 
   <br>
   <br>
   Instructions below are for MacOS. <br>
@@ -41,13 +41,13 @@ If not, install python 3.7.4 from this link. [https://www.python.org/downloads/]
 - If it does not let you because of 'unidentified developer'.
   - Go to System Preferences --> Security and Privacy --> General. Click open anyway near bottom. 
 
-7. Close all terminal windows and Eject MTeeTeeInstaller. You can also delete the dmg file.
+7. Close all terminal windows and eject MTeeTeeInstaller. You can also delete the dmg file.
 
-8. You are now ready to launch M-Tee-Tee from the applications window. 
+8. You are now ready to launch M-Tee-Tee from the applications folder. 
 
 # Updates:
 
-1. Download the latest release. Same as Setup except when you drag M-Tee-Tee to applications it will give you a warning, Click replace. 
+1. Download the latest release. Same as Setup except when you drag M-Tee-Tee to applications it will give you a warning, click replace. 
 
 
 # Usage:
@@ -101,7 +101,7 @@ Upon selecting "analyze" this screen will appear.
   - If "eht" no height file is required as post and tissue heights are constant and already known. 
   - If "multitissue" a Heights.csv file will need to be provided, an example will be in this repository. 
 - Folder: The folder that you previously generated is. This is also where the heightfile would be saved to. 
-- Percentage Threshold**: Increase this if it catches a peak as basepoint or endpoint you dont want. (Between 0-1)
+- Percentage Threshold: Increase this if it catches a peak as basepoint or endpoint you dont want. (Between 0-1)
 - Youngs modulus: For the mold material, standard 1.33 MPa.
 - Distance between posts**: How far away are the posts from each other. 
 - Peak Setection Sens: The lower the number the more sensitive (Between 0-1).
