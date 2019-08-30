@@ -26,10 +26,11 @@ ___
 ![trackingGUI](icon/python3.png) 
 If not, install python 3.7.4 from this link. [https://www.python.org/downloads/](https://www.python.org/downloads/)
 
-2. Go to [https://www.github.com/Jack-alope/MTeeTee/releases](https://www.github.com/Jack-alope/MTeeTee/releases) and download the .dmg of the latest realease. If on macOS 10.12 or higher download 'MTeeTeeInstaller-10-12.dmg' while if on macOS 10.11 download 'MTeeTeeInstaller-10-11.dmg'.  
-- MTeeTeeInstaller-10-12.dmg uses the latest version of opencv
-- MTeeTeeInstaller-10-11.dmg uses opencv version 3.4.2.16  
-- [10-12](https://github.com/Jack-alope/MTeeTee/releases/download/v0.0.3/MTeeTeeMacOS-10-12.dmg)
+2. Download the .dmg installer from the link below or from my github [releases page](https://github.com/Jack-alope/MTeeTee/releases)
+- [Mac OS 10.12 or higher](https://github.com/Jack-alope/MTeeTee/releases/download/v0.0.3/MTeeTeeMacOS-10-12.dmg)
+  - Uses the latest version of opencv
+- Will add link for Mac OS 10.11
+  - Uses opencv 3.4.2.16
 
 4. Double click the dmg file and open the disk image. You should see something like this. 
 ![trackingGUI](icon/installer.png)
