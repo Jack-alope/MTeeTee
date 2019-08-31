@@ -106,8 +106,8 @@ Upon selecting "analyze" this screen will appear.
 - Distance between posts**: How far away are the posts from each other. 
 - Peak Setection Sens: The lower the number the more sensitive (Between 0-1).
 - Peak Detection Diff: Minimum distance peaks can be from each other. 
-- Peak Smoothing Poly: What degree polynomial should it use to smooth the data, higher is smoother but can lose accuracy. 
-- Peak Smoothing window: What size window should it use for the smoothing function. Larger is smoother. 
+- Peak Smoothing Poly: What degree polynomial should it use to smooth the data, higher is smoother but can lose amplitude. 
+- Peak Smoothing window: What size window should it use for the smoothing function. Larger is smoother. Must be odd. Must be larger than Peak Smoothing Poly.
 - Time min: Start time. Use 0 to start from beginning. 
 - Time max: End Time. Use 0 to continue to end. 
 ![analyzeGUI](icon/analyzegui1.png) 
