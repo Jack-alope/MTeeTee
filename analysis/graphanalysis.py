@@ -34,11 +34,11 @@ class GraphAnalyze():
             j = 0
             k = 0
             # Find the index value for the minimum time value
-            while olddf[i]['time'][j] < expar['TIMEMIN']*1000:
+            while olddf[i]['time'][j] < expar['TIMEMIN']:
                 j += 1
             # Find the index value for the max time value, only if not 0
             if expar['TIMEMAX'] != 0:
-                while olddf[i]['time'][k] < expar['TIMEMAX']*1000:
+                while olddf[i]['time'][k] < expar['TIMEMAX']:
                     k += 1
             # If maxtimevalue is 0 set it to the last item in the dataframe
             else:
@@ -95,7 +95,7 @@ class GraphAnalyze():
                 expar[i]['TISSUEHEIGHT2'] = 11.5
 
             # Convert to seconds
-            df[i]['time'] = df[i]['time'].divide(1000)
+            #df[i]['time'] = df[i]['time'].divide(1000)
             # Prep the data
             df[i]['disp'] = self.prepdata(df[i]['disp'], expar)
             # Find the peaks

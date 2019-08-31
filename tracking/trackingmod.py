@@ -22,6 +22,7 @@ class MultiTissueTracker():
 			dummy["crosssect"] = 0
 			dummy["txtfile"] = open('{2}/T{0}@{1}Hz_{3}.txt'.format((params['FIRSTTISSUE'] + i), params['PACINGFREQ'], params['SAVE'], params['DAY']), "w")
 			dummy["csvfile"] = open('{2}/T{0}@{1}Hz_{3}.csv'.format((params['FIRSTTISSUE'] + i), params['PACINGFREQ'], params['SAVE'], params['DAY']), "w")
+			#dummy["datfile"] = open('{2}/T{0} @ {1} hz 001.dat'.format((params['FIRSTTISSUE'] + i), params['PACINGFREQ'], params['SAVE']), "w")
 			dummy["nummeasurments"] = 0
 			self.tissuedict[i] = dummy
 			self.tissuedict[i]['csvfile'].write('time' + ',' + 'disp' + ',' + 'x1' + ',' + 'y1' + ',' + 'x2' + ',' + 'y2' + ',' + 'crosssect' + '\n')
@@ -128,7 +129,8 @@ class MultiTissueTracker():
 				oddX = (centroid[0]/self.calib_factor)
 				#Save the y position of the odd post
 				oddY = (centroid[1]/self.calib_factor)
-				time = self.vs.get(cv2.CAP_PROP_POS_MSEC)
+				#Get the time in seconds
+				time = self.vs.get(cv2.CAP_PROP_POS_MSEC)/1000
 				disp = np.sqrt(((oddX - evenX)**2) + ((oddY - evenY)**2))
 				self.tissuedict[reltissueID]['nummeasurments'] += 1
 				self.writetocsv(reltissueID, disp, evenX, evenY, oddX, oddY, self.tissuedict[reltissueID]['crosssect'], time)
@@ -177,6 +179,8 @@ class MultiTissueTracker():
 	def writetocsv(self, reltissueID, disp, x1, y1, x2, y2, cross, time):
 		#time = self.vs.get(cv2.CAP_PROP_POS_MSEC)
 		self.tissuedict[reltissueID]['csvfile'].write(str(time) + ','  + str(disp) + ',' + str(x1) + ',' + str(y1) + ',' + str(x2) + ',' + str(y2) + ',' + str(cross) + "\n")
+
+		#self.tissuedict[reltissueID]['datfile'].write(str(time) + '	' + str(y1) + ' ' + str(x2) + ' ' + str(y2) + ' ' + str(y2) + "\n")
 	
 	def centroid(self, postcords):
 		#Create a dictionary to hold the x, y for each pots
@@ -194,8 +198,9 @@ class MultiTissueTracker():
 	def cleanup(self):
 		#ALSO CLOSE FILES
 		for key in self.tissuedict.keys():
-			self.tissuedict[key]["datfile"].close()
+			#self.tissuedict[key]["datfile"].close()
 			self.tissuedict[key]["csvfile"].close()
+			self.tissuedict[key]["txtfile"].close()
 		#RELEASE VIDEO STREAM
 		self.vs.release()
 		#CLOSE ALL WINDOWS

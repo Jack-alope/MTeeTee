@@ -137,12 +137,16 @@ class PerformCalculations():
         developedforce = []
 
         for i in range(len(peaks)):
-            x = np.array(df['x1'][peaks[i]], df['y1'][peaks[i]])
-            y = np.array(df['x1'][basepoints[i]], df['y1'][basepoints[i]])
-            developedforce.append(np.linalg.norm(x-y) * forcecoef1)
-            x = np.array(df['x2'][peaks[i]], df['y2'][peaks[i]])
-            y = np.array(df['x2'][basepoints[i]], df['y2'][basepoints[i]])
-            developedforce.append(np.linalg.norm(x-y) * forcecoef2)
+            first = (df['x1'][peaks[i]], df['y1'][peaks[i]])
+            second = (df['x1'][basepoints[i]], df['y1'][basepoints[i]])
+            dist = np.sqrt(((second[0]-first[0])**2) + ((second[1]-first[1])**2))
+            developedforce.append(dist * forcecoef1)
+
+            first = (df['x2'][peaks[i]], df['y2'][peaks[i]])
+            second = (df['x2'][basepoints[i]], df['y2'][basepoints[i]])
+            dist = np.sqrt(((second[0]-first[0])**2) + ((second[1]-first[1])**2))
+            developedforce.append(dist * forcecoef2)
+
         std = np.std(developedforce)
         avg = sum(developedforce) / len(developedforce)
         return (avg, std)
