@@ -84,10 +84,10 @@ Upon selecting "track" from the startupGUI this screen will appear.
 3. Press 'l'. Draw cross section for first tissue. 
 ![trackingGUI](icon/crosssect.png) 
 Press enter. Repeat for each tissue (Don't press 'l' again, just draw line and enter.)    
-4. Press 's'. Draw a box around the first post. 
+4. Press 's'. Draw a box around the left post. 
 ![trackingGUI](icon/post1.png) 
 Press enter. 
-5. Draw a box around the second post.
+5. Draw a box around the right post.
 ![trackingGUI](icon/post2.png) 
 Press enter. Repeat steps 4 and 5 for each tissue (Don't press 's' again, just draw boxes and hit enter.)  
 6. This is what it should look like when posts are being tracked. If no green boxes are displayed you didnt select the posts. 
