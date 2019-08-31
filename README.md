@@ -39,7 +39,7 @@ If not, install python 3.7.4 from this link. [https://www.python.org/downloads/]
 
 6. Double click 'SetupScript'. Let it run until you see [Process Completed]. 
 - If it does not let you because of 'unidentified developer'.
-  - Go to System Preferences --> Security and Privacy --> General. Click open anyway near bottom. 
+  - Go to System Preferences --> Security and Privacy --> General. Click open anyway near bottom.   
 
 7. Close all terminal windows and eject MTeeTeeInstaller. You can also delete the dmg file.
 
