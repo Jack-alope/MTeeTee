@@ -27,9 +27,9 @@ ___
 If not, install python 3.7.4 from this link. [https://www.python.org/downloads/](https://www.python.org/downloads/)
 
 2. Download the .dmg installer by clicking on your operating system below or by visiting my github [releases page](https://github.com/Jack-alope/MTeeTee/releases).
-- [Mac OS 10.12 or higher](https://github.com/Jack-alope/MTeeTee/releases/download/v0.0.3/MTeeTeeMacOS-10-12.dmg)
+- [Mac OS 10.12 or higher](https://github.com/Jack-alope/MTeeTee/releases/download/v0.0.4/MTeeTeeMacOS-10-12.dmg)
   - Uses the latest version of opencv
-- [Mac OS 10.11](https://github.com/Jack-alope/MTeeTee/releases/download/v0.0.3/MTeeTeeMacOS-10-11.dmg)
+- [Mac OS 10.11](https://github.com/Jack-alope/MTeeTee/releases/download/v0.0.4/MTeeTeeMacOS-10-11.dmg)
   - Uses opencv 3.4.2.16
 
 4. Double click the dmg file and open the disk image. You should see something like this. 
