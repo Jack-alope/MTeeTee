@@ -6,6 +6,7 @@ import cv2
 import datetime
 import os.path
 import math
+import PySimpleGUI as sg
 
 class MultiTissueTracker():
 	def __init__(self, params):
@@ -43,22 +44,34 @@ class MultiTissueTracker():
 		self.loopframes(params)
 
 	def loopframes(self, params):
+		cropped = 0
+		#self.frameheight = 0
 		#Loop while frames still exist and 'q' hasnt been pressed
 		while True:
 			#Read in the frame, [1] is the image part of the vs.read
 			frame = self.vs.read()[1]
-
 			#Break if and write text file if there are no more frames
 			if frame is None:
 				self.writetotxt(params)
 				break
 
 			#Resize the frame, maybe add user input
-			#frame = imutils.rotate(frame, angle=90)
+			
 			frame = imutils.resize(frame, width=params['FRAMEWIDTH'])
+			if cropped == 1:
+				frame = frame[y:y+h, x:x+w]
+				frame = imutils.resize(frame, width=params['FRAMEWIDTH'])
 			#Needed to read in q, s, c, l
 			key = cv2.waitKey(1) & 0xFF
 
+
+			if key == ord('e'):
+				params = self.editGUI(params)
+			if key == ord('g'):
+				#MOVE TO FUNCTION
+				cropped = 1
+				line = cv2.selectROI("Frame", frame, fromCenter=False, showCrosshair=True)
+				(x, y, w, h) = [int(v) for v in line]
 			#If 's' is pressed select post
 			if key == ord('s'):
 				#If the calib_factor has not been changed from 0 do not select posts
@@ -131,10 +144,25 @@ class MultiTissueTracker():
 				oddY = (centroid[1]/self.calib_factor)
 				#Get the time in seconds
 				time = self.vs.get(cv2.CAP_PROP_POS_MSEC)/1000
+				#Calculate the distance between the tweo centoids
 				disp = np.sqrt(((oddX - evenX)**2) + ((oddY - evenY)**2))
 				self.tissuedict[reltissueID]['nummeasurments'] += 1
+				#Write current frame data to csv
 				self.writetocsv(reltissueID, disp, evenX, evenY, oddX, oddY, self.tissuedict[reltissueID]['crosssect'], time)
-
+	
+	def editGUI(self, params):
+		layout = [
+            [sg.Text('Frame Width', size=(25, 1)), sg.InputText(
+                '2000', key='FRAMEWIDTH')],
+			[sg.Submit(), sg.Cancel()]
+			]
+        # Show to GUI window
+		window = sg.Window('Tracking GUI', layout)
+        # Read the window, values is a dictionary with the values
+		event, values = window.Read()
+		window.Close()
+		params['FRAMEWIDTH'] = int(values['FRAMEWIDTH'])
+		return params
 	def calibrate(self, frame, calibration_dist):
 		#Draw box on current frame
 		line = cv2.selectROI("Frame", frame, fromCenter=False, showCrosshair=True)
@@ -146,7 +174,6 @@ class MultiTissueTracker():
 	def crosssection(self, frame, reltissueID):
 		#Draw box on current frame
 		line = cv2.selectROI("Frame", frame, fromCenter=False, showCrosshair=True)
-		#Divide height of box(pixels) by calibration factor (pixels/mm) to get height(mm)
 		(x, y, w, h) = [int(v) for v in line]
 		dist = np.sqrt(((w)**2) + (h)**2)
 		height = dist/self.calib_factor
