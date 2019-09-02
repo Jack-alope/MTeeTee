@@ -27,9 +27,9 @@ ___
 If not, install python 3.7.4 from this link. [https://www.python.org/downloads/](https://www.python.org/downloads/)
 
 2. Download the .dmg installer by clicking on your operating system below or by visiting my github [releases page](https://github.com/Jack-alope/MTeeTee/releases).
-- [Mac OS 10.12 or higher](https://github.com/Jack-alope/MTeeTee/releases/download/v0.0.4/MTeeTeeMacOS-10-12.dmg)
+- [Mac OS 10.12 or higher](https://github.com/Jack-alope/MTeeTee/releases/download/v0.0.5/MTeeTeeMacOS-10-12.dmg)
   - Uses the latest version of opencv
-- [Mac OS 10.11](https://github.com/Jack-alope/MTeeTee/releases/download/v0.0.4/MTeeTeeMacOS-10-11.dmg)
+- [Mac OS 10.11](https://github.com/Jack-alope/MTeeTee/releases/download/v0.0.5/MTeeTeeMacOS-10-11.dmg)
   - Uses opencv 3.4.2.16
 
 4. Double click the dmg file and open the disk image. You should see something like this. 
@@ -77,7 +77,7 @@ Upon selecting "track" from the startupGUI this screen will appear.
 - Group Number**: Currently being worked on. 
 - Tracker: Which type of opencv tracker would you like to use. csrt gives best results while kcf is the fastest. 
 ![trackingGUI](icon/trackinggui1.png)  
-1. Once you submit a frame will pop, this is a 6 tissue example. 
+1. Once you submit a frame will pop, this is a 6 tissue example. If you need to resize it press 'e' and enter a new width. If you need to cop it press 'g' and select the region you would like to crop it too. 
 ![trackingGUI](icon/trackstart.png) 
 2. Immediately press 'c' and draw a calibration line the length that you inputted in the GUI. Press enter. 
 ![trackingGUI](icon/calib.png) 
