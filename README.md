@@ -1,4 +1,4 @@
-Visit https://github.com/Jack-alope/Multi_Tissue_Tracking instead
+Visit https://github.com/teammurphy/Multi_Tissue_Tracking instead
 <div align="center"><img src="icon/newicon.png"></div> <br>
 
 <div align="center">
